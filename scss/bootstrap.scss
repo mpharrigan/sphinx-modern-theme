@@ -1,0 +1,199 @@
+/*!
+ * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
+ * Copyright 2011-2016 The Bootstrap Authors
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+$enable-flex: true;
+
+// Core variables and mixins
+@import "custom";
+@import "variables";
+@import "mixins";
+
+// Reset and dependencies
+@import "normalize";
+@import "print";
+
+// Core CSS
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+// Components
+@import "animation";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "tags";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "responsive-embed";
+@import "close";
+
+// Components w/ JavaScript
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+
+// Utility classes
+@import "utilities";
+
+// Nav
+#toc {
+  ul {
+    @extend .nav;
+  }
+  .toctree-l1 ul {
+    display: none;
+  }
+  .current > ul {
+    display: block;
+  }
+  li {
+    @extend .nav-item;
+  }
+  a {
+    @extend .nav-link;
+  }
+
+  .current {
+    @extend .active;
+  }
+
+  a {
+    display: block;
+    padding: .25rem .75rem;
+    color: $gray;
+  }
+  a:hover,
+  a:focus {
+    color: $brand-primary;
+    text-decoration: none;
+  }
+  .current > a {
+    font-weight: 500;
+    color: $gray-dark;
+  }
+
+  .toctree-l1 ul li > a {
+    display: block;
+    padding: .25rem .75rem;
+    font-size: 90%;
+    color: #99979c;
+  }
+  .toctree-l1 ul li > a:hover,
+  .toctree-l1 ul li > a:focus {
+    color: $brand-primary;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .toctree-l1 ul .current > a,
+  .toctree-l1 ul .current:hover > a,
+  .toctree-l1 ul .current:focus > a {
+    font-weight: 500;
+    color: $gray-dark;
+    background-color: transparent;
+  }
+}
+
+#toc > ul > li.current {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#toc > ul > li:first-child {
+  margin-top: 0;
+}
+
+#toc > ul > li:last-child {
+  margin-bottom: 2rem;
+}
+
+// Text
+.headerlink {
+  @extend .text-muted;
+  font-size: smaller;
+  margin-left: 0.5rem;
+}
+
+// Table
+.longtable {
+  @extend .table;
+  @extend .table-bordered;
+}
+
+// Images
+.figure {
+  @extend .card;
+
+  img {
+    @extend .img-fluid;
+    @extend .card-img-top;
+  }
+
+  .caption {
+    @extend .card-block;
+    @extend .card-text;
+    font-size: 90%;
+  }
+}
+
+.figure.align-right {
+  @extend .pull-md-right;
+  width: 18rem;
+}
+
+.figure.align-left {
+  @extend .pull-md-left;
+  width: 18rem;
+}
+
+.figure.align-center {
+  @include media-breakpoint-up(xs) {
+    width: 100%;
+  }
+  @include media-breakpoint-up(md) {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+// Version selector
+#versions {
+  #other-versions-text {
+    color: $gray;
+  }
+
+  #other-versions {
+    margin-top: 0.5rem;
+  }
+
+  .list-inline-item.version {
+    margin-left: 0.5rem;
+  }
+
+  .card-block {
+    padding: 0.5rem;
+  }
+
+  .btn-sm {
+    padding: 0.125rem 0.3rem;
+  }
+}

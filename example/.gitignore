@@ -1,0 +1,12 @@
+_build/
+
+# autosummary generated files
+_cluster/
+_msm/
+_hmm/
+_ratematrix/
+_decomposition/
+_featurization/
+_tpt/
+_io/
+_gmrq/

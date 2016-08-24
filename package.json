@@ -1,0 +1,17 @@
+{
+  "name": "sphinx-modern-theme",
+  "description": "A modern, bootstrap-based theme for sphinx.",
+  "version": "0.0.1",
+  "homepage": "http://github.com/mpharrigan/sphinx-modern-theme",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mpharrigan/sphinx-modern-theme.git"
+  },
+  "author": "Matthew Harrigan",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}
