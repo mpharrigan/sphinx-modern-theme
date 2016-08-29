@@ -2,9 +2,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
+*.swp
 
-/.idea/
+/.idea
 /node_modules
 /.sass-cache
-/dist/
-/build/
+/dist
+/build
+/python

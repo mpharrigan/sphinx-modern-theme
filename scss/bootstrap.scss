@@ -133,10 +133,27 @@ $enable-flex: true;
   margin-left: 0.5rem;
 }
 
+.viewcode-link {
+  @extend .text-muted;
+  font-size: smaller;
+  margin-left: 0.5rem;
+}
+
 // Table
-.longtable {
+table.longtable {
   @extend .table;
   @extend .table-bordered;
+}
+
+// Field list
+table.field-list {
+  @extend .table;
+  @extend .table-sm;
+}
+
+// Lists in field-list tables 
+td.field-body > ul {
+  @extend .list-unstyled;
 }
 
 // Images
@@ -197,3 +214,26 @@ $enable-flex: true;
     padding: 0.125rem 0.3rem;
   }
 }
+
+// API docs
+
+dl.attribute > dt {
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+}
+
+dl.method > dt {
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background-color: #F9edf7;
+  border-color: #bcdff1;
+}
+
+dl.class > dt {
+  font-size: larger;
+}
+
