@@ -3,11 +3,8 @@
 
 .. _preface_menu:
 
-.. top level heading needed for LaTeX TOC in sphinx<=1.3.1
-
-************
-scikit-learn
-************
+Getting Started
+===============
 
 .. toctree::
     :maxdepth: 2
