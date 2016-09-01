@@ -1,7 +1,5 @@
-:mod:`test_py_module`
-=====================
+API Reference
+=============
 
 .. automodule:: test_py_module.test
     :members:
-    :private-members:
-    :special-members:
