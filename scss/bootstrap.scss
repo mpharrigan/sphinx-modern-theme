@@ -266,6 +266,7 @@ dl.docutils{
   .admonition-title{
     font-weight: bold;
   }
+  border: 1px solid black;
 }
 .admonition.attention{
   @extend .alert-info;
