@@ -237,3 +237,40 @@ dl.class > dt {
   font-size: larger;
 }
 
+
+// Admonitions
+
+.admonition {
+  @extend .alert;
+  .admonition-title{
+    font-weight: bold;
+  }
+}
+.admonition.attention{
+  @extend .alert-info;
+}
+.admonition.caution{
+  @extend .alert-warning;
+}
+.admonition.danger{
+  @extend .alert-danger;
+}
+.admonition.error{
+  @extend .alert-danger;
+}
+.admonition.hint{
+  @extend .alert-success;
+}
+.admonition.important{
+  @extend .alert-success;
+}
+.admonition.note{
+  @extend .alert-info;
+}
+.admonition.tip{
+  @extend .alert-info;
+}
+.admonition.warning{
+  @extend .alert-warning;
+}
+

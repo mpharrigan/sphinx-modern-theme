@@ -25,16 +25,6 @@
 
     Like this.
 
-:Dedication:
-
-    For Docutils users & co-developers.
-
-:abstract:
-
-    This document is a demonstration of the reStructuredText markup
-    language, containing examples of all basic reStructuredText
-    constructs and many advanced constructs.
-
 .. meta::
    :keywords: reStructuredText, demonstration, demo, parser
    :description lang=en: A demonstration of the reStructuredText
@@ -385,8 +375,6 @@ this: `Duplicate Target Names`_), an error is generated.
 
 Directives
 ----------
-
-.. contents:: :local:
 
 These are just a sample of the many reStructuredText Directives.  For
 others, please see
