@@ -1,16 +1,11 @@
 .. This is a comment. Note how any initial comments are moved by
    transforms to after the document title, subtitle, and docinfo.
-
-================================
-reStructuredText Demonstration
-================================
+--------------------------------
+Docutils
+--------------------------------
 
 .. Above is the document title, and below is the subtitle.
    They are transformed from section titles after parsing.
-
---------------------------------
- Examples of Syntax Constructs
---------------------------------
 
 .. bibliographic fields (which also require a transform):
 

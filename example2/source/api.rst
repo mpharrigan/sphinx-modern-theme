@@ -1,5 +1,6 @@
 API Reference
 =============
 
-.. automodule:: test_py_module.test
-    :members:
+.. toctree::
+
+    test_py_module
