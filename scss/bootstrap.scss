@@ -145,6 +145,15 @@ table.longtable {
   @extend .table-bordered;
 }
 
+table.docutils{
+  @extend .table;
+  @extend .table-bordered;
+
+  thead{
+    @extend .thead-default;
+  }
+}
+
 // Field list
 table.field-list {
   @extend .table;
