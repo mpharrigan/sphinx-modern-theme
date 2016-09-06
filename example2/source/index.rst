@@ -3,18 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-=================================================
+=========
 Demo Docs
-=================================================
+=========
 
-:Page Status: Incomplete
-:Last Reviewed: 2013-10-29
+These pages show how various components of documentation might look. Lovingly adapted from sphinx_rtd_theme example docs.
 
-Contents:
 
 .. toctree::
     :hidden:
-    :caption: Sweet Docs
 
     demo
     list
@@ -22,8 +19,8 @@ Contents:
     long
     api
 
-Maaaaath!
-=========
+Math!
+=====
 
 This is a test.  Here is an equation:
 :math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
@@ -55,7 +52,7 @@ Giant tables
 +------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+------------+------------+-----------+
 
 Optional parameter args
------------------------
+=======================
 
 At this point optional parameters `cannot be generated from code`_.
 However, some projects will manually do it, like so:
@@ -110,27 +107,20 @@ Code test
     "session_name": "shorthands"
     }
 
-Sidebar
-=======
+Figure
+======
 
-.. sidebar:: Ch'ien / The Creative
+.. figure:: static/yi_jing_01_chien.jpg
+    :align: right
 
-    .. image:: static/yi_jing_01_chien.jpg
-
-    *Above* CH'IEN THE CREATIVE, HEAVEN
-
-    *Below* CH'IEN THE CREATIVE, HEAVEN
+    CH'IEN THE CREATIVE, HEAVEN
 
 The first hexagram is made up of six unbroken lines. These unbroken lines stand for the primal power, which is light-giving, active, strong, and of the spirit. The hexagram is consistently strong in character, and since it is without weakness, its essence is power or energy. Its image is heaven. Its energy is represented as unrestricted by any fixed conditions in space and is therefore conceived of as motion. Time is regarded as the basis of this motion. Thus the hexagram includes also the power of time and the power of persisting in time, that is, duration.
 
 The power represented by the hexagram is to be interpreted in a dual sense in terms of its action on the universe and of its action on the world of men. In relation to the universe, the hexagram expresses the strong, creative action of the Deity. In relation to the human world, it denotes the creative action of the holy man or sage, of the ruler or leader of men, who through his power awakens and develops their higher nature.
 
-Code with Sidebar
-=================
-
-.. sidebar:: A code example
-
-    With a sidebar on the right.
+Code
+====
 
 .. literalinclude:: test_py_module/test.py
     :language: python
@@ -217,15 +207,19 @@ Here I am making a citation [1]_, another [2]_ and another [3]_
 
 .. [3] This citation will have two backlinks.
 
-======
 Images
 ======
 
 .. figure:: static/yi_jing_01_chien.jpg
+    :align: center
 
-    This is a caption for a figure.
+    A caption for the figure
+
 
 Download links
 ==============
 
 :download:`This long long long long long long long long long long long long long long long download link should be blue with icon, and should wrap white-spaces <static/yi_jing_01_chien.jpg>`
+
+:Page Status: Incomplete
+:Last Reviewed: 2013-10-29
