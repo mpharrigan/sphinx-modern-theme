@@ -286,3 +286,16 @@ dl.docutils{
   @extend .alert-warning;
 }
 
+// Block quote
+
+blockquote{
+  @extend .blockquote;
+
+  .attribution{
+    @extend .blockquote-footer;
+  }
+  .attribution::before{
+    content: none;
+  }
+}
+
