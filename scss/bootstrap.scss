@@ -237,6 +237,18 @@ dl.class > dt {
   font-size: larger;
 }
 
+// Plain old description lists
+
+dl.docutils{
+  @extend .row;
+  dt{
+    @extend .col-sm-3;
+  }
+  dd{
+    @extend .col-sm-9;
+  }
+}
+
 
 // Admonitions
 
