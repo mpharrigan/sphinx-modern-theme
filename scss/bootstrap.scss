@@ -251,10 +251,19 @@ dl.class > dt {
 dl.docutils{
   @extend .row;
   dt{
-    @extend .col-sm-3;
+    @extend .col-md-2;
+  }
+  .classifier{
+    @extend .col-md-3;
+    font-style: italic;
   }
   dd{
-    @extend .col-sm-9;
+    @extend .col-md-7;
+  }
+
+
+  .classifier-delimiter{
+    display: none;
   }
 }
 
