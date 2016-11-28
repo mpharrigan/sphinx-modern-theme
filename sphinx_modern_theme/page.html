@@ -32,13 +32,14 @@
       </div>
       {%- endif %}
 
-      <hr/>
+      <hr>
 
       <div id="toc">
         {{ toctree(maxdepth=2, collapse=False, includehidden=True) }}
       </div>
 
       {%- if theme_versions_url %}
+      <hr>
       <div id="versions" class="card">
         <div class="card-block">
           <h6 class="card-title" style="display:inline;">Version {{release}}</h6>
