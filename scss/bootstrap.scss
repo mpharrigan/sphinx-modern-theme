@@ -173,12 +173,12 @@ td.field-body > ul {
 }
 
 .figure.align-right {
-  @extend .pull-md-right;
+  @extend .float-md-right;
   width: 18rem;
 }
 
 .figure.align-left {
-  @extend .pull-md-left;
+  @extend .float-md-left;
   width: 18rem;
 }
 

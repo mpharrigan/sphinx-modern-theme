@@ -10,8 +10,8 @@
   "author": "Matthew Harrigan",
   "license": "MIT",
   "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.3",
-    "grunt": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0"
+    "bootstrap": "^4.0.0-alpha.5",
+    "grunt": "~1.0",
+    "grunt-contrib-sass": "~1.0"
   }
 }

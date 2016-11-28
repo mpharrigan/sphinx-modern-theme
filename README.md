@@ -22,7 +22,7 @@ Packaging
 Example
 -------
 
-    cd example/
+    cd example1/
     make html
     cd _build/html
     python -m http.server
