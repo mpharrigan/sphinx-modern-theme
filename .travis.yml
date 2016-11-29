@@ -1,0 +1,31 @@
+language: python
+sudo: false
+python:
+  - "3.5"
+
+addons:
+  apt:
+    packages:
+      - ruby-sass
+      - npm
+
+install:
+  - npm install
+  - grunt sass
+  - pip install -r requirements.txt
+  - python setup.py bdist_wheel
+  - pip install dist/*.whl
+
+script:
+  - cd example1 && make html && cd -
+  - cd example2 && make html && cd -
+
+deploy:
+  provider: s3
+  bucket: "sphinx-modern-theme"
+  skip_cleanup: true
+  region: "us-west-1"
+  access_key_id:
+    secure: "elSIAdgVI0j/6JuIZUeDRH2xJ9btp4NApU7tPNOTEsZjqXxIFag/XHOq0vBJfABZMtUNahFZ6IP0GjL8tl/9UlbpfD/ykzcLm45c/CZSiJVf0P1s2gENOrNx4byEv7aeCfisxtqJAEaaWfXqZfro35SjbLEioCuVEMQJ1WzwcWXYCn6Mk9ucKoRIHoSy6MeSVfD9DW5MqaVAC34JCYHURj9vv9dJU78HiARw+9hpQQk6bcJ6LxUOHhfHmrsBqCKAyTvAuRa9ctz70ApYOjlNPhEv196bcdJFdO+ujXGBQ24fpcoewhj8LWGBmpeuoMEVMQxT3l2C3T7IjjpE36UyuQLsKHjuJSpfZjmiKzyBxmDdVE/n4i8JhGCMCm4MdnnUHQw4nyqTGXI40C/mVIwCy0ptT65T/YmhXFQvkPgzKS6WLc1x/U4rI8Trsp4yMKtRhfNajxcKeeZsDfHZmcdXH8by3LEjM3Ze7k1ar959HUCcLPqawhkf1mqIjusntYSzYfqUL4OuxAif8ERec7NGG7n76U20/ye5keUYQ/mxLw/+yuWxHioMUX4EptIKg81zYNPkDG37ijfUmx9P2uaYJcmZi++Q5WNQVkh7Rc2wJHy3UsAgBB53Qk9MwDmxOXU8TGm6cOn3jseLXlM7ocRyDwcEzaPqu9kFaPogMgyHICg="
+  secret_access_key:
+    secure: "wpQ+RzYqdxbyes4n08Wi16CpH/mjWP4YPgy37cvvvgNC2YfDFjQ/7Gb/nCHouSCxJebPSGSr9RJ1SQTorbVcYt406U10WCVC5zDVPxqhRbPsiS+0CfTqb1/LVBjGx9mToABeETCqzOSmtXdhyn71ckBL/rxkAZ5hu9QPdQiYR0kiYwtNGUklZGw6ZRwt/VHx0xWLvmV60+NYPtKms8d7WqEqD3wScJ8FUDwWQJkc08d3ak1T0VgsUUaZfI7Z6buJ5sw/lSfSZaFl9YtMOzyRjPEFIuaIi2lLADq/+PXIICIemk6NgRYeQWWugp4YwdjiBYx7c0IKNaXJqeSmnSCkD8ijBDdmn4TXYKSz5ymcyxnN4WIelI3ePLvI4NU9V+Yzm1E7H93sVtchx5VaBNT1Lfd/zHF/xQc0+E20NU0KKxgBbtfe5xCRVABw7nPmKU0IU/Op7bFo2zk1IUP2FmGujmeL7emrNZSZ11lCsijewK4IQB8o+6Z+uLQaTFBfBj9ir8CSft4EcMqa1VhkmB8EAxYOaD8Aqrp2zhCJduibDCRoLAPVAAvFiQFicSRLcPnySkHrIY0Jlmlhopz5nHIFo7mYELafhdRmCABaLuavCxAk1bA9FT1LNbUNrJEFwaNNpHhObeiD8aFfOZohzE6h1zWtGowIQuli1NRuOZwKweg="
