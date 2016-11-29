@@ -12,7 +12,7 @@ install:
   - pip install dist/*.whl
 
 script:
-  - cd example1 && make html && cd -
+  # - cd example1 && make html && cd - # Requires msmbuilder
   - cd example2 && make html && cd -
 
 deploy:
