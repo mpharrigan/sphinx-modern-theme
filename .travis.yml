@@ -13,7 +13,7 @@ install:
 
 script:
   # - cd example1 && make html && cd - # Requires msmbuilder
-  - cd example2 && make html && cd -
+  - cd example2 && make html && cd - && mv example2/build dist/example2
 
 deploy:
   provider: s3
@@ -24,3 +24,4 @@ deploy:
     secure: "K8qy/BwdwCB2ohiPmbZi9kC23Y0+FAxyymwkKmSqm4BWaNTbL8FUrmEyBYFh9x+RURaxkbDFOmM7mS1AMLWDFwSvIsqlDA4QtFiIg26UCDKk34boNlUmnDFmRQfDHjtkBC7VhYeEmx92sivIRwcFaO0+00q+oAusoAKtHuDlyTNjjFfda4BleQewu7CJG/HeBBueT0HAKZboe0Od32pYWNnaC5wyXJGGARffkuhRna6LfaD4Axab351FmSmIksN7URi9DpYmfx/9fT2OdU1WMPjqHGkh9xV9cvvO9YtqgMJhPhTz+9gRjMnzm2RyJhoCxGvRrcoq0s4oc4EPrVUX+NlaSo+RBR4OgRb4YywMSDf3vWTjxu7jzNVV9QvXBg+6A4n3G+lhVufmTB5q81eOfIeBr2ZTAbXfLPRC+Ga0531LLSzZOBJTcNAkS3GgqPPgIb9UfWuQgNYyT/ROCAK3OubxbZrY3oZ3kSyy6sZXpQhwJOoedVubGDSL344HYaKzivMKRxLuvKJR0NKOwQnLdM/rLtRCCTvOJNbJAiYdjfVXwxZb8+cVwF75KmmSrbh+Piu6cRrflK3bVXxHbotjQEUTCywu8ck9kwEKotyeyuuM0Z5dEyF4l3VN3ya8AOIMYh22ti92iLQhqVSnsOqWT4MPyjBimiabDZNcS+7BYC8="
   secret_access_key:
     secure: "lj6gaLXifjuQVnTHFSsGTyf4u3hhdV4hjTb3dWJg4cWf1S9DVITJE3QWrJAqKRk0OjtZ5Z3205Gpf57pjl0Alj7/H0MhiZ40ifbdOrV6RG069CXw8NKfek/KcySGItUvEQcO+pPIqtx5f73PDGPYuTd2v1jlHGtuhLMvKHvwYIC9ZArvREHIL5r5A1XyPYmFlqN9EnQ1YI+nBkLTYto26zZeCwml0Z6UR+5xpXggVE9EPJgkCPggxXEu8eqT4G6OQZ00xKzohkFhNAdVNIlq7Ftwp0cNdeDToJyGwkdrwFfQajmlen223QmkZCMxAjQaC6eCI0oSaXplYt/GYjyP8GhuNBP7v/d/wObfJBSChASNtaJo7RxR3WmwAmI9P76zyB43g0NWPGYwa8RX+niq2UYoH+cSBxAYiL3anMZlEyS0MJCgupAz7fOVmthb3lapzP3jOOlm1BRHrZgofCiUZZVWwaFZHb5hP2MfuqLSarqbZM2VKP6bkfxaVz75hnnoSOVwa4eAcfuBBuOHxEhhLtddsU5k3mX7zV5usvF5NfXbmC5J2aX4Q/BVjo9mFYFTIrTaWP38w3S0CqKan8HlH2QAQ7gHZkwJw2yb+NuqYECN0v21JbYAGUBTkp+uH1I25y8qrMezOeCO7qRhegX5rPis1lh2cRBmtayEfWHypy4="
+  local_dir: dist
