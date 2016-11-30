@@ -13,7 +13,8 @@ install:
 
   # Stuff for examples
   - pip install numpy scipy scikit-learn cython # wheels
-  - pip install mdtraj msmbuilder # from source
+  - pip install mdtraj
+  - pip install msmbuilder
 
 script:
   - cd example-example && make html && mv build ../dist/example-example && cd -
