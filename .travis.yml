@@ -17,7 +17,7 @@ install:
   - pip install msmbuilder
   # Special version of numpydoc with patch to reduce output
   # Needed for sklearn docs
-  - pip install https://github.com/mpharrigan/numpydoc/archive/v0.6.1.zip
+  - pip install https://github.com/mpharrigan/numpydoc/archive/v0.6.2.zip
 
 script:
   - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build ../dist/example-example
