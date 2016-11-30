@@ -15,6 +15,7 @@ install:
   - pip install numpy scipy scikit-learn cython # wheels
   - pip install mdtraj
   - pip install msmbuilder
+  - pip install numpydoc # sklearn docs
 
 script:
   - cd example-example && make html && mv build ../dist/example-example && cd -
