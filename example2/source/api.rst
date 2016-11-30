@@ -1,7 +1,7 @@
-:mod:`test_py_module`
-=====================
+API Reference
+=============
 
-.. automodule:: test_py_module.test
-    :members:
-    :private-members:
-    :special-members:
+.. toctree::
+
+    test_py_module
+    msm

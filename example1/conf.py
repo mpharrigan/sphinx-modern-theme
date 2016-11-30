@@ -33,12 +33,12 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
-    'numpydoc',
+    'sphinx.ext.napoleon',
 ]
 
 autosummary_generate = True
 autodoc_default_flags = ['members', 'inherited-members']
-numpydoc_class_members_toctree = False
+napoleon_google_docstring = False
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = []

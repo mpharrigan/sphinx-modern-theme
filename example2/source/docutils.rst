@@ -1,19 +1,6 @@
 .. This is a comment. Note how any initial comments are moved by
    transforms to after the document title, subtitle, and docinfo.
 
-================================
-reStructuredText Demonstration
-================================
-
-.. Above is the document title, and below is the subtitle.
-   They are transformed from section titles after parsing.
-
---------------------------------
- Examples of Syntax Constructs
---------------------------------
-
-.. bibliographic fields (which also require a transform):
-
 :Author: David Goodger
 :Address: 123 Example Street
           Example, EX  Canada
@@ -38,24 +25,16 @@ reStructuredText Demonstration
 
     Like this.
 
-:Dedication:
-
-    For Docutils users & co-developers.
-
-:abstract:
-
-    This document is a demonstration of the reStructuredText markup
-    language, containing examples of all basic reStructuredText
-    constructs and many advanced constructs.
-
 .. meta::
    :keywords: reStructuredText, demonstration, demo, parser
    :description lang=en: A demonstration of the reStructuredText
        markup language, containing examples of all basic
        constructs and many advanced constructs.
 
-.. contents:: Table of Contents
-.. section-numbering::
+
+--------
+Docutils
+--------
 
 
 Structural Elements
@@ -172,7 +151,7 @@ Definition Lists
 
 Term
     Definition
-Term : classifier
+Term
     Definition paragraph 1.
 
     Definition paragraph 2.
@@ -396,8 +375,6 @@ this: `Duplicate Target Names`_), an error is generated.
 
 Directives
 ----------
-
-.. contents:: :local:
 
 These are just a sample of the many reStructuredText Directives.  For
 others, please see

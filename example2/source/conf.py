@@ -34,9 +34,6 @@ extensions = [
     'sphinx.ext.viewcode',
 ]
 
-# Math
-mathjax_path = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -159,7 +156,7 @@ html_logo = 'static/yi_jing_01_chien.jpg'
 #html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-html_show_sourcelink = True
+#html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
