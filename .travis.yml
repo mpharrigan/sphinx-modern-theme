@@ -15,7 +15,9 @@ install:
   - pip install numpy scipy scikit-learn cython # wheels
   - pip install mdtraj
   - pip install msmbuilder
-  - pip install numpydoc # sklearn docs
+  # Special version of numpydoc with patch to reduce output
+  # Needed for sklearn docs
+  - pip install https://github.com/mpharrigan/numpydoc/archive/v0.6.1.zip
 
 script:
   - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build ../dist/example-example
