@@ -42,6 +42,7 @@ autosummary_generate = True
 # this is needed for some reason...
 # http://stackoverflow.com/questions/12206334/sphinx-autosummary-toctree-contains-reference-to-nonexisting-document-warnings
 numpydoc_show_class_members = False
+class_members_toctree = False
 
 # The suffix of source filenames.
 source_suffix = '.rst'
