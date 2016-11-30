@@ -11,9 +11,14 @@ install:
   - python setup.py bdist_wheel
   - pip install dist/*.whl
 
+  # Stuff for examples
+  - pip install numpy scipy scikit-learn mdtraj cython # wheels
+  - pip install msmbuilder # from source
+
 script:
-  # - cd example1 && make html && cd - # Requires msmbuilder
-  - cd example2 && make html && cd - && mv example2/build dist/example2
+  - cd example-example && make html && mv build ../dist/example-example && cd -
+  - cd example-sklearn && make html && mv _build ../dist/example-sklearn && cd -
+  - cd example-msmbuilder && make html && mv _build ../dist/example-msmbuilder && cd -
 
 deploy:
   provider: s3
