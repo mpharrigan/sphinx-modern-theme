@@ -18,9 +18,9 @@ install:
   - pip install numpydoc # sklearn docs
 
 script:
-  - cd example-example && make html && mv build ../dist/example-example && cd -
-  - cd example-sklearn && make html && mv _build ../dist/example-sklearn && cd -
-  - cd example-msmbuilder && make html && mv _build ../dist/example-msmbuilder && cd -
+  - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build ../dist/example-example
+  - cd $TRAVIS_BUILD_DIR/example-sklearn && make html && mv _build ../dist/example-sklearn
+  - cd $TRAVIS_BUILD_DIR/example-msmbuilder && make html && mv _build ../dist/example-msmbuilder
 
 deploy:
   provider: s3
