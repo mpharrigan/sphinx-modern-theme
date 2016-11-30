@@ -145,6 +145,15 @@ table.longtable {
   @extend .table-bordered;
 }
 
+table.docutils{
+  @extend .table;
+  @extend .table-bordered;
+
+  thead{
+    @extend .thead-default;
+  }
+}
+
 // Field list
 table.field-list {
   @extend .table;
@@ -237,5 +246,77 @@ dl.method > dt {
 
 dl.class > dt {
   font-size: larger;
+}
+
+// Plain old description lists
+
+dl.docutils{
+  @extend .row;
+  dt{
+    @extend .col-md-2;
+  }
+  .classifier{
+    @extend .col-md-3;
+    font-style: italic;
+  }
+  dd{
+    @extend .col-md-7;
+  }
+
+
+  .classifier-delimiter{
+    display: none;
+  }
+}
+
+
+// Admonitions
+
+.admonition {
+  @extend .alert;
+  .admonition-title{
+    font-weight: bold;
+  }
+  border: 1px solid black;
+}
+.admonition.attention{
+  @extend .alert-info;
+}
+.admonition.caution{
+  @extend .alert-warning;
+}
+.admonition.danger{
+  @extend .alert-danger;
+}
+.admonition.error{
+  @extend .alert-danger;
+}
+.admonition.hint{
+  @extend .alert-success;
+}
+.admonition.important{
+  @extend .alert-success;
+}
+.admonition.note{
+  @extend .alert-info;
+}
+.admonition.tip{
+  @extend .alert-info;
+}
+.admonition.warning{
+  @extend .alert-warning;
+}
+
+// Block quote
+
+blockquote{
+  @extend .blockquote;
+
+  .attribution{
+    @extend .blockquote-footer;
+  }
+  .attribution::before{
+    content: none;
+  }
 }
 
