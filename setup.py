@@ -1,10 +1,8 @@
 from setuptools import setup
 
-VERSION="0.0.1"
-
 setup(
     name='sphinx_modern_theme',
-    version=VERSION,
+    version="1.0.0",
     url='http://github.com/mpharrigan/sphinx-modern-theme',
     license='MIT',
     author='Matthew Harrigan',
