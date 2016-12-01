@@ -9,7 +9,7 @@ def get_git_tag():
 
 
 def get_git_branch():
-    travis_branch = os.environ.get('TRAVIS_BRANCH')
+    travis_branch = os.environ.get('TRAVIS_BRANCH', '')
     if len(travis_branch) > 0:
         return travis_branch
     return check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).decode()
