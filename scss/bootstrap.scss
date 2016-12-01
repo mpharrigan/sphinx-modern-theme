@@ -255,12 +255,18 @@ dl.docutils{
   dt{
     @extend .col-md-2;
   }
+
+  // Ugh! The addition of classifiers screws up the
+  // bootstrap layout. We do something fragile
   .classifier{
     @extend .col-md-3;
     font-style: italic;
   }
-  dd{
+  .classifier + dd{
     @extend .col-md-7;
+  }
+  dt + dd{
+    @extend .col-md-10;
   }
 
 
