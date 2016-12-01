@@ -20,11 +20,11 @@ install:
   - pip install https://github.com/mpharrigan/numpydoc/archive/v0.6.2.zip
 
 script:
-  - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build ../dist/example-example
-  - cd $TRAVIS_BUILD_DIR/example-sklearn 2> /dev/null && make html && mv _build ../dist/example-sklearn
-  - cd $TRAVIS_BUILD_DIR/example-msmbuilder && make html && mv _build ../dist/example-msmbuilder
-  - cd $TRAVIS_BUILD_DIR/docs && make html && if [[ -n $TRAVIS_TAG ]] ; then mv _build/html ../dist/docs/$TRAVIS_TAG; else mv _build/html ../dist/docs/development; fi
-  - cd $TRAVIS_BUILD_DIR # necessary for deploy step?
+  - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build/html ../dist/example-example
+  - cd $TRAVIS_BUILD_DIR/example-sklearn > /dev/null && make html && mv _build/html ../dist/example-sklearn
+  - cd $TRAVIS_BUILD_DIR/example-msmbuilder && make html && mv _build/html ../dist/example-msmbuilder
+  - cd $TRAVIS_BUILD_DIR/docs && make html && mv _build/html ../dist/docs
+  - cd $TRAVIS_BUILD_DIR && python handler-versioning.py
 
 deploy:
   - provider: s3
