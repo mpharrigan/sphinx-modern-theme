@@ -1,22 +1,18 @@
-.. Sphinx Modern Theme documentation master file, created by
-   sphinx-quickstart on Wed Nov 30 15:02:40 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Sphinx Modern Theme
+===================
 
-Welcome to Sphinx Modern Theme's documentation!
-===============================================
+Sphinx Modern Theme is a clean HTML theme for Sphinx_.
+It is based on Bootstrap_ to be modern looking and mobile first.
+The theme is designed to be highly opinionated, but the template and style sheet is easy to
+understand.
 
-Contents:
+.. _Sphinx: http://www.sphinx-doc.org
+.. _Bootstrap: http://getbootstrap.com/
 
 .. toctree::
-   :maxdepth: 2
+   :hidden:
 
+   User/index
+   Developer/index
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
