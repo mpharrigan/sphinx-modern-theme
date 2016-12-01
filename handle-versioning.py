@@ -30,7 +30,7 @@ def update_versions_json(base_url, tag, versions_json_fn='versions.json'):
         'url': "{base_url}/{version}/docs/".format(base_url=base_url, version=tag),
         'latest': True,
     })
-    with open("dist/versions.json", 'w') as versionf:
+    with open("dist/{versions_json_fn}".format(versions_json_fn=versions_json_fn), 'w') as versionf:
         json.dump(versions, versionf, indent=2)
 
 
@@ -42,7 +42,7 @@ def main():
         # Tagged version
         tag = os.environ['TRAVIS_TAG']
         move_docs(tag)
-        update_versions_json('sphinx-modern-theme.s3-website-us-west-1.amazonaws.com/docs', tag)
+        update_versions_json('http://sphinx-modern-theme.s3-website-us-west-1.amazonaws.com', tag)
 
 
 main()
