@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sphinx_modern_theme',
-    version="1.0.0",
+    version="1.1.0.dev0",
     url='http://github.com/mpharrigan/sphinx-modern-theme',
     license='MIT',
     author='Matthew Harrigan',
