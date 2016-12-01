@@ -42,7 +42,7 @@ def main():
         # Tagged version
         tag = os.environ['TRAVIS_TAG']
         move_docs(tag)
-        update_versions_json('http://sphinx-modern-theme.s3-website-us-west-1.amazonaws.com/docs', tag)
+        update_versions_json('http://sphinx-modern-theme.s3-website-us-west-1.amazonaws.com', tag)
 
 
 main()
