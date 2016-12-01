@@ -1,6 +1,18 @@
 from setuptools import setup
 from subprocess import check_output
 import re
+import os
+
+
+def get_git_tag():
+    return check_output(['git', 'describe', '--tags', '--long']).decode()
+
+
+def get_git_branch():
+    travis_branch = os.environ.get('TRAVIS_BRANCH')
+    if len(travis_branch) > 0:
+        return travis_branch
+    return check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).decode()
 
 
 def get_version():
@@ -12,7 +24,7 @@ def get_version():
     When crafting a release, start a new branch named 1.y
 
     """
-    tag = check_output(['git', 'describe', '--tags', '--long']).decode()
+    tag = get_git_tag()
     ma = re.match(r'v(\d+)\.(\d+)\.(\d+)\-(\d+)\-(\w+)', tag)
     if ma is None:
         print("The git tag {} does not match the format of v1.y.z-n-abcdef1")
@@ -20,7 +32,7 @@ def get_version():
     major, minor, patch, dirty, hash = ma.groups()
     if int(dirty) > 0:
         # Convoluted logic to get the correct "dev" version based on the branch name
-        branch = check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD']).decode()
+        branch = get_git_branch()
         ma = re.match(r'(\d)+\.(\d+)', branch)
         if ma is not None:
             branch_major, branch_minor = ma.groups()
