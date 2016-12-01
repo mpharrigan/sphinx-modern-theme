@@ -21,7 +21,7 @@ install:
 
 script:
   - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build/html ../dist/example-example
-  - cd $TRAVIS_BUILD_DIR/example-sklearn > /dev/null && make html && mv _build/html ../dist/example-sklearn
+  - cd $TRAVIS_BUILD_DIR/example-sklearn > /dev/null && make html && mv _build/html/stable ../dist/example-sklearn
   - cd $TRAVIS_BUILD_DIR/example-msmbuilder && make html && mv _build/html ../dist/example-msmbuilder
   - cd $TRAVIS_BUILD_DIR/docs && make html && mv _build/html ../dist/docs
   - cd $TRAVIS_BUILD_DIR && python handle-versioning.py
