@@ -6,7 +6,7 @@ from urllib.request import urlopen
 def move_docs(tag):
     stuffs = [
         'example-example',
-        'example-sklearn',
+        # 'example-sklearn',
         'example-msmbuilder',
         'docs',
     ]
