@@ -34,8 +34,6 @@ deploy:
     secret_access_key:
       secure: "lj6gaLXifjuQVnTHFSsGTyf4u3hhdV4hjTb3dWJg4cWf1S9DVITJE3QWrJAqKRk0OjtZ5Z3205Gpf57pjl0Alj7/H0MhiZ40ifbdOrV6RG069CXw8NKfek/KcySGItUvEQcO+pPIqtx5f73PDGPYuTd2v1jlHGtuhLMvKHvwYIC9ZArvREHIL5r5A1XyPYmFlqN9EnQ1YI+nBkLTYto26zZeCwml0Z6UR+5xpXggVE9EPJgkCPggxXEu8eqT4G6OQZ00xKzohkFhNAdVNIlq7Ftwp0cNdeDToJyGwkdrwFfQajmlen223QmkZCMxAjQaC6eCI0oSaXplYt/GYjyP8GhuNBP7v/d/wObfJBSChASNtaJo7RxR3WmwAmI9P76zyB43g0NWPGYwa8RX+niq2UYoH+cSBxAYiL3anMZlEyS0MJCgupAz7fOVmthb3lapzP3jOOlm1BRHrZgofCiUZZVWwaFZHb5hP2MfuqLSarqbZM2VKP6bkfxaVz75hnnoSOVwa4eAcfuBBuOHxEhhLtddsU5k3mX7zV5usvF5NfXbmC5J2aX4Q/BVjo9mFYFTIrTaWP38w3S0CqKan8HlH2QAQ7gHZkwJw2yb+NuqYECN0v21JbYAGUBTkp+uH1I25y8qrMezOeCO7qRhegX5rPis1lh2cRBmtayEfWHypy4="
     local_dir: dist
-    on:
-      tags: true
   - provider: pypi
     user: mpharrigan
     password:
