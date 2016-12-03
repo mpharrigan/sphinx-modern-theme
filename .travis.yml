@@ -12,7 +12,7 @@ install:
   - pip install dist/*.whl
 
   # Stuff for examples
-  - pip install numpy scipy scikit-learn # wheels
+  # - pip install numpy scipy scikit-learn # wheels
   # Special version of numpydoc with patch to attempt to reduce output
   - pip install https://github.com/mpharrigan/numpydoc/archive/v0.6.2.zip
 
