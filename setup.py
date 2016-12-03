@@ -76,4 +76,15 @@ setup(
             'static/*.js',
         ]
     },
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'License :: OSI Approved :: MIT License',
+        'Topic :: Documentation',
+        'Topic :: Documentation :: Sphinx',
+        'Framework :: Sphinx',
+        'Framework :: Sphinx :: Theme',
+        'Intended Audience :: Developers',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+    ],
 )
