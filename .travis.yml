@@ -4,23 +4,34 @@ python:
   - "3.5"
 
 install:
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+    else
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+
+  # Build a wheel
+  - conda create -q -n build-environment python=$TRAVIS_PYTHON_VERSION
+  - source activate build-environment
   - gem install sass
   - npm install
   - grunt sass
-  - pip install -r requirements.txt
   - python setup.py bdist_wheel
-  - pip install dist/*.whl
 
-  # Stuff for examples
-  - pip install numpy scipy pandas scikit-learn cython # wheels
-  - pip install mdtraj
-  - pip install msmbuilder
+  # Build examples
+  - conda create -q -n example-environment python=$TRAVIS_PYTHON_VERSION scikit-learn msmbuilder
+  - source activate example-environment
+  - pip install dist/*.whl
   # Special version of numpydoc with patch to attempt to reduce output
   - pip install https://github.com/mpharrigan/numpydoc/archive/v0.6.2.zip
 
 script:
-  - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build/html ../dist/example-example
-  # Too much output:
+  # - cd $TRAVIS_BUILD_DIR/example-example && make html && mv build/html ../dist/example-example
   # - cd $TRAVIS_BUILD_DIR/example-sklearn > /dev/null && make html && mv _build/html/stable ../dist/example-sklearn
   - cd $TRAVIS_BUILD_DIR/example-msmbuilder && make html && mv _build/html ../dist/example-msmbuilder
   - cd $TRAVIS_BUILD_DIR/docs && make html && mv _build/html ../dist/docs
