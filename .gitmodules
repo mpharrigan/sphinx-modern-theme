@@ -1,0 +1,3 @@
+[submodule "msmbuilder"]
+	path = msmbuilder
+	url = https://github.com/mpharrigan/mixtape.git
